@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Next Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('images/bg.png');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    #content {
+      text-align: center;
+      margin-top: 130px; /* Adjust margin-top for moving the entire content down */
+    }
+    #content img {
+      max-width: 30%;
+      margin-top: 10px; /* Adjust margin-top for better positioning of the images */
+    }
+    #randomNumber {
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div id="content">
+    <img src="images/phaohoa.gif" alt="Middle Image">
+    <br>
+    <p>Chúc mừng cháu đã bốc được <span id="randomNumber"></span> đồng </p>
+    <img src="images/bunny.gif" alt="Middle Image">
+  </div>
+
+  <script>
+    // Get the random number from local storage and display it
+    var randomNumber = localStorage.getItem('randomNumber');
+    document.getElementById("randomNumber").innerText = randomNumber;
+  </script>
+</body>
+</html>
